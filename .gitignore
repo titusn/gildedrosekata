@@ -5,4 +5,4 @@ obj
 vendor
 .idea
 *.iml
-/Java/src/test/java/com/gildedrose/GildedRoseTest.updateQualityTest.received.foo
+*Test.received
