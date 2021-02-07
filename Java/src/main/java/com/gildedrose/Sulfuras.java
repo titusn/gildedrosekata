@@ -7,6 +7,5 @@ public class Sulfuras extends Item {
 
     @Override
     protected void doUpdateQuality() {
-        super.doUpdateQuality();
     }
 }
