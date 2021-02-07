@@ -17,19 +17,14 @@ public class Item {
     public static Item createItem(String name, int sellIn, int quality) {
         switch (name) {
             case "Aged Brie":
-
-                break;
+                return new AgedBrie(sellIn, quality);
             case "Backstage passes to a TAFKAL80ETC concert":
-
-                break;
+                return new BackstagePass(sellIn, quality);
             case "Sulfuras, Hand of Ragnaros":
-
-                break;
+                return new Sulfuras(sellIn, quality);
             default:
-
-                break;
+                return new Item(name, sellIn, quality);
         }
-        return new Item(name, sellIn, quality);
     }
 
     @Override
