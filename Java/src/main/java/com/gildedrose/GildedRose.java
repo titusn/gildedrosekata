@@ -51,7 +51,11 @@ class GildedRose {
                     item.quality = 0;
                 }
             } else {
-                tempIf(item);
+                if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
+                    tempIf(item);
+                } else {
+                    tempIf(item);
+                }
             }
         }
     }
