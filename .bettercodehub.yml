@@ -1,5 +1,5 @@
-include:
-  - /Java/*
+exclude:
+  - /Java-Spock/*
 component_depth: 1
 languages:
 - java
