@@ -32,7 +32,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    protected void doUpdateQuality() {
+    protected void updateQuality() {
         if (quality > 0) {
             quality = quality - 1;
         }

@@ -6,7 +6,7 @@ public class BackstagePass extends Item {
     }
 
     @Override
-    protected void doUpdateQuality() {
+    protected void updateQuality() {
         if (quality < 50) {
             quality = quality + 1;
 
