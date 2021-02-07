@@ -32,7 +32,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    void doUpdateQuality() {
+    protected void doUpdateQuality() {
         switch (name) {
             case "Aged Brie":
                 if (quality < 50) {
