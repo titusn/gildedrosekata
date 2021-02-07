@@ -15,6 +15,20 @@ public class Item {
     }
 
     public static Item createItem(String name, int sellIn, int quality) {
+        switch (name) {
+            case "Aged Brie":
+
+                break;
+            case "Backstage passes to a TAFKAL80ETC concert":
+
+                break;
+            case "Sulfuras, Hand of Ragnaros":
+
+                break;
+            default:
+
+                break;
+        }
         return new Item(name, sellIn, quality);
     }
 
