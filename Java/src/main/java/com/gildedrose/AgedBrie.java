@@ -15,6 +15,10 @@ public class AgedBrie extends Item {
             increaseQuality();
         }
 
+        limitQuality();
+    }
+
+    private void limitQuality() {
         if (quality > 50) {
             quality = 50;
         }
