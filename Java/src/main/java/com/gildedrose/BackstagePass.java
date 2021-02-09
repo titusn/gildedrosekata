@@ -7,14 +7,14 @@ public class BackstagePass extends Item {
 
     @Override
     protected void updateQuality() {
-        quality++;
+        increaseQuality();
 
         if (sellIn < 11) {
-            quality++;
+            increaseQuality();
         }
 
         if (sellIn < 6) {
-            quality++;
+            increaseQuality();
         }
 
         super.updateSellIn();
