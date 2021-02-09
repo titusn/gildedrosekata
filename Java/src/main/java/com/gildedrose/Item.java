@@ -35,17 +35,21 @@ public class Item {
     }
 
     protected void updateQuality() {
-        quality--;
+        decreaseQuality();
 
         updateSellIn();
 
         if (sellInDateHasPassed()) {
-            quality--;
+            decreaseQuality();
         }
 
         if (quality < 0) {
             quality = 0;
         }
+    }
+
+    private void decreaseQuality() {
+        quality--;
     }
 
     protected void increaseQuality() {
