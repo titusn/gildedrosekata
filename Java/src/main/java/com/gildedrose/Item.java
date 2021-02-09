@@ -46,7 +46,7 @@ public class Item {
         limitQuality();
     }
 
-    private void decreaseQuality() {
+    protected void decreaseQuality() {
         quality--;
     }
 
