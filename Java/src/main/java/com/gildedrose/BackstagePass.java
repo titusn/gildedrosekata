@@ -8,17 +8,17 @@ public class BackstagePass extends Item {
     @Override
     protected void updateQuality() {
         if (quality < 50) {
-            quality = quality + 1;
+            quality++;
 
             if (sellIn < 11) {
                 if (quality < 50) {
-                    quality = quality + 1;
+                    quality++;
                 }
             }
 
             if (sellIn < 6) {
                 if (quality < 50) {
-                    quality = quality + 1;
+                    quality++;
                 }
             }
         }
