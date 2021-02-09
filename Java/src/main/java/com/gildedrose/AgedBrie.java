@@ -23,8 +23,4 @@ public class AgedBrie extends Item {
             quality = 50;
         }
     }
-
-    private void increaseQuality() {
-        quality++;
-    }
 }

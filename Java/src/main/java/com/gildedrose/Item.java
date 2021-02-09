@@ -48,6 +48,10 @@ public class Item {
         }
     }
 
+    protected void increaseQuality() {
+        quality++;
+    }
+
     protected void updateSellIn() {
         sellIn--;
     }
