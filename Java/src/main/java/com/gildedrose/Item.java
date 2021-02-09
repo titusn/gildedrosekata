@@ -39,7 +39,7 @@ public class Item {
 
         updateSellIn();
 
-        if (sellIn < 0) {
+        if (sellInDateHasPassed()) {
             quality--;
         }
 
@@ -50,5 +50,9 @@ public class Item {
 
     protected void updateSellIn() {
         sellIn--;
+    }
+
+    protected boolean sellInDateHasPassed() {
+        return sellIn < 0;
     }
 }
