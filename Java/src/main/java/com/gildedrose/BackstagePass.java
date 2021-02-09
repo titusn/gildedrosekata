@@ -23,6 +23,10 @@ public class BackstagePass extends Item {
             quality = 0;
         }
 
+        limitQuality();
+    }
+
+    private void limitQuality() {
         if (quality > 50) {
             quality = 50;
         }
