@@ -35,16 +35,16 @@ public class Item {
     }
 
     protected void updateQuality() {
-        if (quality > 0) {
-            quality--;
-        }
+        quality--;
 
         updateSellIn();
 
         if (sellIn < 0) {
-            if (quality > 0) {
-                quality--;
-            }
+            quality--;
+        }
+
+        if (quality < 0) {
+            quality = 0;
         }
     }
 
