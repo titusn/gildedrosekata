@@ -11,7 +11,7 @@ public class Conjured extends Item {
             quality = quality - 2;
         }
 
-        sellIn = sellIn - 1;
+        super.updateSellIn();
 
         if (sellIn < 0) {
             if (quality > 0) {
