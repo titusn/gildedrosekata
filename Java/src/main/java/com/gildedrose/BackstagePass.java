@@ -22,7 +22,8 @@ public class BackstagePass extends Item {
         limitQuality();
     }
 
-    private void limitQuality() {
+    @Override
+    protected void limitQuality() {
         if (sellInDateHasPassed()) {
             quality = 0;
         }
