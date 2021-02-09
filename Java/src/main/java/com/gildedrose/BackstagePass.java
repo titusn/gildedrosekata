@@ -19,14 +19,14 @@ public class BackstagePass extends Item {
 
         super.updateSellIn();
 
-        if (sellInDateHasPassed()) {
-            quality = 0;
-        }
-
         limitQuality();
     }
 
     private void limitQuality() {
+        if (sellInDateHasPassed()) {
+            quality = 0;
+        }
+
         if (quality > 50) {
             quality = 50;
         }
