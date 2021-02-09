@@ -2,11 +2,11 @@ package com.gildedrose;
 
 public class Item {
 
-    public String name;
+    protected String name;
 
-    public int sellIn;
+    protected int sellIn;
 
-    public int quality;
+    protected int quality;
 
     Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -49,6 +49,6 @@ public class Item {
     }
 
     protected void updateSellIn() {
-        sellIn = sellIn - 1;
+        sellIn--;
     }
 }
