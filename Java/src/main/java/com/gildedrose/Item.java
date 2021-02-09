@@ -43,9 +43,7 @@ public class Item {
             decreaseQuality();
         }
 
-        if (quality < 0) {
-            quality = 0;
-        }
+        limitQuality();
     }
 
     private void decreaseQuality() {
@@ -54,6 +52,12 @@ public class Item {
 
     protected void increaseQuality() {
         quality++;
+    }
+
+    protected void limitQuality() {
+        if (quality < 0) {
+            quality = 0;
+        }
     }
 
     protected void updateSellIn() {
