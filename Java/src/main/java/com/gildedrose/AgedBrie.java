@@ -11,13 +11,17 @@ public class AgedBrie extends Item {
 
         super.updateSellIn();
 
-        if (sellIn < 0) {
+        if (sellInDateHasPassed()) {
             increaseQuality();
         }
 
         if (quality > 50) {
             quality = 50;
         }
+    }
+
+    private boolean sellInDateHasPassed() {
+        return sellIn < 0;
     }
 
     private void increaseQuality() {
