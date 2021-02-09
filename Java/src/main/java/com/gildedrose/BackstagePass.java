@@ -19,7 +19,7 @@ public class BackstagePass extends Item {
 
         super.updateSellIn();
 
-        if (sellIn < 0) {
+        if (sellInDateHasPassed()) {
             quality = 0;
         }
 

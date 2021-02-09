@@ -9,9 +9,9 @@ public class Conjured extends Item {
     protected void updateQuality() {
         quality = quality - 2;
 
-        super.updateSellIn();
+        updateSellIn();
 
-        if (sellIn < 0) {
+        if (sellInDateHasPassed()) {
             quality = quality - 2;
         }
 

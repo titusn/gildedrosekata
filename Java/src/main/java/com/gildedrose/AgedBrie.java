@@ -11,7 +11,7 @@ public class AgedBrie extends Item {
 
         super.updateSellIn();
 
-        if (super.sellInDateHasPassed()) {
+        if (sellInDateHasPassed()) {
             increaseQuality();
         }
 
