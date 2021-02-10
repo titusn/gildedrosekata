@@ -2,16 +2,15 @@ package com.gildedrose;
 
 public class Item {
 
+    protected Quality quality;
     protected String name;
 
     protected int sellIn;
 
-    protected int quality;
-
     Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
-        this.quality = quality;
+        this.quality = new Quality(quality);
     }
 
     public static Item createItem(String name, int sellIn, int quality) {
@@ -31,32 +30,17 @@ public class Item {
 
     @Override
     public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+        return this.name + ", " + this.sellIn + ", " + this.quality.toString();
     }
 
     protected void updateQuality() {
-        decreaseQuality();
+
+        quality.decrease();
 
         updateSellIn();
 
         if (sellInDateHasPassed()) {
-            decreaseQuality();
-        }
-
-        limitQuality();
-    }
-
-    protected void decreaseQuality() {
-        quality--;
-    }
-
-    protected void increaseQuality() {
-        quality++;
-    }
-
-    protected void limitQuality() {
-        if (quality < 0) {
-            quality = 0;
+            quality.decrease();
         }
     }
 

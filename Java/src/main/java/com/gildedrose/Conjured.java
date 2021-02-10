@@ -7,16 +7,14 @@ public class Conjured extends Item {
 
     @Override
     protected void updateQuality() {
-        decreaseQuality();
-        decreaseQuality();
+        quality.decrease();
+        quality.decrease();
 
         updateSellIn();
 
         if (sellInDateHasPassed()) {
-            decreaseQuality();
-            decreaseQuality();
+            quality.decrease();
+            quality.decrease();
         }
-
-        limitQuality();
     }
 }

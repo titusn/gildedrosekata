@@ -7,21 +7,12 @@ public class AgedBrie extends Item {
 
     @Override
     protected void updateQuality() {
-        increaseQuality();
+        quality.increase();
 
         super.updateSellIn();
 
         if (sellInDateHasPassed()) {
-            increaseQuality();
-        }
-
-        limitQuality();
-    }
-
-    @Override
-    protected void limitQuality() {
-        if (quality > 50) {
-            quality = 50;
+            quality.increase();
         }
     }
 }
