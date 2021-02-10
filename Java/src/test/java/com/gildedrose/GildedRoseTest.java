@@ -17,8 +17,8 @@ class GildedRoseTest {
                         "Aged Brie",
                         "Backstage passes to a TAFKAL80ETC concert",
                         "Sulfuras, Hand of Ragnaros",
-                        "Conjured"},
-                new Integer[]{-1, 0, 5, 6, 11},
+                ˚           "Conjured"},
+        new Integer[]{-1, 0, 5, 6, 11},
                 new Integer[]{0, 1, 50, 49}
         );
     }

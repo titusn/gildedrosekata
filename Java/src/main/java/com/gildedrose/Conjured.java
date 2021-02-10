@@ -10,9 +10,9 @@ public class Conjured extends Item {
         quality.decrease();
         quality.decrease();
 
-        updateSellIn();
+        sellIn.update();
 
-        if (sellInDateHasPassed()) {
+        if (sellIn.hasPassed()) {
             quality.decrease();
             quality.decrease();
         }
