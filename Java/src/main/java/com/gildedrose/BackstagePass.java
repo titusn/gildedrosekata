@@ -9,17 +9,17 @@ public class BackstagePass extends Item {
     protected void updateQuality() {
         quality.increase();
 
-        if (sellIn < 11) {
+        if (sellIn.get() < 11) {
             quality.increase();
         }
 
-        if (sellIn < 6) {
+        if (sellIn.get() < 6) {
             quality.increase();
         }
 
-        super.updateSellIn();
+        sellIn.update();
 
-        if (sellInDateHasPassed()) {
+        if (sellIn.hasPassed()) {
             quality = new Quality(0);
         }
     }
