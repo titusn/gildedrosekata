@@ -42,4 +42,4 @@ public class Item {
             quality.decrease();
         }
     }
-}
+    }
