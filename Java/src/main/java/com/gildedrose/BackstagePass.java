@@ -9,11 +9,11 @@ public class BackstagePass extends Item {
     protected void updateQuality() {
         quality.increase();
 
-        if (sellIn.get() < 11) {
+        if (SellInSoon()) {
             quality.increase();
         }
 
-        if (sellIn.get() < 6) {
+        if (SellInVerySoon()) {
             quality.increase();
         }
 
@@ -22,5 +22,13 @@ public class BackstagePass extends Item {
         if (sellIn.hasPassed()) {
             quality = new Quality(0);
         }
+    }
+
+    private boolean SellInVerySoon() {
+        return sellIn.get() < 6;
+    }
+
+    private boolean SellInSoon() {
+        return sellIn.get() < 11;
     }
 }
